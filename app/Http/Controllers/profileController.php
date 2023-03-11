@@ -29,7 +29,12 @@ class profileController extends Controller
        $blog->description=$req->description;
 
        $blog->save();
-       return "hello";
+       return redirect('/post');
+    }
+    function post()
+    {
+       $post=Blog::all();
+       return view('post',['post'=>$post]);
     }
    
 }

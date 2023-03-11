@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link rel="stylesheet" href="{{ asset('css/editor.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/post.css') }}">
 
 </head>
 <body>
