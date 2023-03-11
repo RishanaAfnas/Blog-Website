@@ -28,5 +28,10 @@ Route::view('/register','register');
 Route::post("/register",[userController::class,'register']);
 Route::post('/login',[userController::class,'login']);
 Route::get("/profile",[profileController::class,'index']);
+Route::get("/editor",[profileController::class,'edit']);
+
+Route::post("/upload",[profileController::class,'upload']);
+
+
 ?>
 
