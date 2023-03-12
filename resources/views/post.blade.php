@@ -1,8 +1,28 @@
 @extends('master')
 @section('content')
-<header>
+<nav class="navbar">
+  <img src="{{asset ("images/logo.png")}}" class="logo" alt="">
+  <ul class="links-container">
+      <li class="link-item"><a href="/" class="link">home</a></li>
+      <li class="link-item"><a href="/editor" class="link">editor</a></li>
+      @if (Session::has('user'))
+      <li class="nav-item dropdown drop user-name">
+          <a class="nav-link dropdown-toggle text-primary fw-bold" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" style="text-transform: uppercase">
+              {{ Session::get('user')['name'] }}
+          </a>
+          <ul class="dropdown-menu ">
+              <li><a class="dropdown-item" href="/logout" style="font-size: 15px">Logout </a></li>
+              <li><a class="dropdown-item" href="{{"update/" .Session::get('user')['id'] }}" style="font-size: 15px">Update </a></li>
+
+          </ul>
+      </li>
+      @endif
+  </ul>
+</nav>
+<header class="blog mt-5" >
     <h1>Our Blog</h1>
-</header>
+</header >
 <div class="row">
     @foreach($post as $item)
     <div class="left-column">

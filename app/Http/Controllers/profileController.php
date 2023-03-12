@@ -22,11 +22,12 @@ class profileController extends Controller
     }
     function upload(Request $req)
     {
-       $blog=new  Blog;
-       
-       $blog->blog_id=$req->blogid;
-       $blog->title=$req->title;
-       $blog->description=$req->description;
+        $imagePath = $req->file('image')->store('public/uploads');
+        $blog=new  Blog;
+        $blog->blog_id=$req->blogid;
+        $blog->title=$req->title;
+        $blog->description=$req->description;
+        $blog->image_path= $imagePath;
 
        $blog->save();
        return redirect('/post');
@@ -36,6 +37,7 @@ class profileController extends Controller
        $post=Blog::all();
        return view('post',['post'=>$post]);
     }
+   
    
 }
 

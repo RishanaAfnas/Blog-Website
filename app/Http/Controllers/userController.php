@@ -36,5 +36,21 @@ class userController extends Controller
            return redirect('/profile');
         }
     }
+    function update($id){
+
+        $data=User::find($id);
+        return view('update',['data'=>$data]);
+    
+    }
+    function editUser(Request $req)
+    {
+       $data= User::find($req->id);
+     
+      $data->name=$req->name;
+      $data->email=$req->email;
+      $data->password=HASH::make($req->password);
+      $data->save();
+      return redirect('/profile');
+    }
 }
 ?>

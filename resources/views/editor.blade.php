@@ -14,9 +14,10 @@
 </div>
 
 <div class="blog-options">
+    {{-- <button class="btn dark publish-btn">publish</button> --}}
+    <input type="file" accept="image/*" id="image-upload"name="image"  >
     <button class="btn dark publish-btn">publish</button>
-    {{-- <input type="file" accept="image/*" id="image-upload" hidden>
-    <button type="submit"><label for="image-upload" class="btn grey upload-btn">Upload Image</label></button> --}}
+    {{-- <button type="submit"><label for="image-upload" class="btn grey upload-btn">Upload Image</label></button> --}}
 </div>
 </form>
 @endsection

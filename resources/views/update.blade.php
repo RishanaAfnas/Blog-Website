@@ -4,19 +4,21 @@
         <div class="container">
 
             <div class="top">
-                <span>Have an account? &nbsp; &nbsp; <a href="/register"
-                        style="text-decoration:none;color:#fff"><b>Register</b></a></span>
-                <header>Login</header>
+                
+                <header>Update</header>
             </div>
-            <form action="login" method="post">
+            <form action="\edituser" method="post">
             @csrf
-           
+            <div class="input-field">
+                <input type="hidden" class="input"  name="id"value="{{$data['id']}} " required>
+                
+            </div>
                 <div class="input-field">
-                    <input type="text" class="input" placeholder="Username" name="name" required>
+                    <input type="text" class="input" placeholder="Username" name="name" value="{{$data['name']}}" required>
                     
                 </div>
                 <div class="input-field">
-                    <input type="email" class="input" placeholder="Email" name="email" required>
+                    <input type="email" class="input" placeholder="Email" name="email"{{$data['email']}} required>
                    
                 </div>
 
@@ -26,7 +28,7 @@
                 </div>
 
                 <div class="input-field">
-                    <input type="submit" class="submit" value="Login" id="">
+                    <input type="submit" class="submit" value="Update" id="">
                 </div>
 
 

@@ -13,6 +13,7 @@
             </a>
             <ul class="dropdown-menu ">
                 <li><a class="dropdown-item" href="/logout" style="font-size: 15px">Logout </a></li>
+                <li><a class="dropdown-item" href="{{"update/" .Session::get('user')['id'] }}" style="font-size: 15px">Update </a></li>
 
             </ul>
         </li>

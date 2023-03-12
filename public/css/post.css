@@ -12,11 +12,10 @@ body{
 	display: table;
 	clear: both;
 }
-header{
-	background-color: #ffffff;
+.blog{
+	
 	padding:30px;
-}
-header h1{
+
 	text-align: center;
 	font-size:60px;
 	color:#000000;
