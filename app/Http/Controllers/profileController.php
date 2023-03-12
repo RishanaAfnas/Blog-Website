@@ -28,9 +28,8 @@ class profileController extends Controller
         $blog->title=$req->title;
         $blog->description=$req->description;
         $blog->image_path= $imagePath;
-
-       $blog->save();
-       return redirect('/post');
+        $blog->save();
+        return redirect('/post');
     }
     function post()
     {

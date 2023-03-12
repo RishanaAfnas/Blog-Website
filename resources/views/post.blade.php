@@ -29,7 +29,7 @@
       <div class="card">
         <h2>{{$item['title']}}</h2>
        
-        <img src="{{asset ("images/blog1.jpg")}}" alt="blog "/>
+        <img src="{{ Storage::url($item->image_path) }}" alt="blog "/>
        
         <p>{{$item['description']}}</p>
       </div>
@@ -45,9 +45,8 @@
         </div> --}}
         <div class="card">
              <h3>Popular Post</h3>
-             <img src="{{asset ("images/blog3.jpg")}}" alt="popular"/>
-             <img src="{{asset ("images/blog4.jpg")}}" alt="popular"/>
-             <img src="{{asset ("images/blog2.jpg")}}" alt="popular"/>
+             <img src="{{ Storage::url($item->image_path) }}" alt="popular"/>
+            
         </div>
         <div class="card">
             <h3>Follow Me</h3>
