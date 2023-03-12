@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->integer('blog_id');
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
             $table->string('image_path') ;
             $table->timestamps();
         });

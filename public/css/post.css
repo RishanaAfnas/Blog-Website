@@ -13,13 +13,13 @@ body{
 	clear: both;
 }
 .blog{
-	
+	background-color: #ffffff;
 	padding:30px;
 
 	text-align: center;
 	font-size:60px;
 	color:#000000;
-	margin:1.5 0px;
+	margin:1.5 15px;
 }
 
 h2{

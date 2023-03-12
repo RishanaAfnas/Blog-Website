@@ -3,7 +3,7 @@
 <nav class="navbar">
     <img src="{{asset ("images/logo.png")}}" class="logo" alt="">
     <ul class="links-container">
-        <li class="link-item"><a href="/" class="link">home</a></li>
+        <li class="link-item"><a href="/post" class="link">Blogs</a></li>
         <li class="link-item"><a href="/editor" class="link">editor</a></li>
         @if (Session::has('user'))
         <li class="nav-item dropdown drop user-name">

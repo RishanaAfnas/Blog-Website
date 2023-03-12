@@ -30,7 +30,6 @@ Route::post('/login',[userController::class,'login']);
 Route::get("/profile",[profileController::class,'index']);
 Route::get("/editor",[profileController::class,'edit']);
 Route::get("/post",[profileController::class,'post']);
-
 Route::post("/upload",[profileController::class,'upload'])->name('upload');;
 Route::get("/update/{id}",[userController::class,'update']);
 Route::post('/edituser',[userController::class,'editUser']);
