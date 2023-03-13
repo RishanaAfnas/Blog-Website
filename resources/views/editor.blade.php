@@ -22,7 +22,7 @@
     </nav>
     <form action="\upload" method="post" enctype="multipart/form-data">
         @csrf
-        <div class="blog">
+        <div class="blogs">
             <div class="input-field">
                 <input type="hidden" class="input" name="blogid" value=" {{ Session::get('user')['id'] }}" required>
             </div>
